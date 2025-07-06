@@ -1,4 +1,5 @@
 const { on } = require("events");
+const { stat } = require("fs");
 
 // Check if a number is positive or negative.
 const checkNum = (num) => (num < 0 ? "Negetavi" : "Positive");
@@ -56,3 +57,44 @@ const grade = (marks) =>
     ? "D"
     : "NG";
 // console.log(grade(90));
+
+// 🧑‍💻 App-like Status Examples (React-style)
+// Show "Typing..." or "Online" or "Offline" based on userStatus value.
+const userStatus = (status) => {
+  return status === "Typing"
+    ? "Typeing"
+    : status === "Online"
+    ? "Online"
+    : status === "Offline"
+    ? "Offline"
+    : "No Status";
+};
+// console.log(userStatus("Ty"));
+
+// Print "Form Completed" if allFieldsFilled = true.
+const formFilled = (status) => (status ? "Form Completed" : "Not Completed");
+// console.log(formFilled(false));
+
+// Print "Notification On" or "Off" based on isNotificationEnabled.
+const statuts = false;
+const isNotificationEnabled = statuts ? "Notification On" : "Off";
+console.log(isNotificationEnabled);
+
+// Print "Connected" or "Disconnected" if isConnected = true/false.
+const isConnected = (statuts) => {
+  return statuts ? "Connected" : "Disconnected";
+};
+// console.log(isConnected(false));
+
+// Print “Watching” or “Paused” based on isPlaying.
+const isPlaying = (statuts) => {
+  return statuts ? "Watching" : "Paused";
+};
+// console.log(isPlaying(false));
+
+// Age-based pricing: < 5 → Free, < 60 → Full Price, ≥ 60 → Senior Discount.
+
+const isDiscount = (price) => {
+  return price < 5 ? "Free" : price < 60 ? "Full Price" : "Senior Discount";
+};
+console.log(isDiscount(60));
