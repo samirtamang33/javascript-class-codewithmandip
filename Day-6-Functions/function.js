@@ -34,8 +34,9 @@
 // };
 // console.log(greet());
 
-const volume = (l, b, h) => {
-  return l * b * h;
-};
 
-console.log(volume(2, 2, 2));
+// const volume = (l, b, h) => {
+//   return l * b * h;
+// };
+
+// console.log(volume(2, 2, 2));
