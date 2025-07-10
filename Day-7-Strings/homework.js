@@ -134,24 +134,49 @@ const includesWord = (string) => string.includes("T");
 console.log(includesWord("Tamang"));
 
 // 5. Create arrow function `startsWithLetter` that returns true if string starts with given letter.
+const startsWithLetter = (string, letter) => string.charAt(0) === letter;
+console.log(startsWithLetter("Samir", "S"));
 
 // 6. Create arrow function `endsWithLetter` that returns true if string ends with given letter.
+const endsWithLetter = (string, letter) => string.endsWith(letter);
+console.log(endsWithLetter("tamang", "s"));
+
+const endsWithLetter1 = (string, letter) =>
+  string.charAt(string.length - 1) === letter;
+console.log(endsWithLetter1("tamang", "g"));
 
 // 7. Create arrow function `trimSpaces` that trims leading and trailing spaces.
+const trimSpaces = (string) => string.trim();
+console.log(trimSpaces("Samir                          "));
 
 // 8. Create arrow function `splitByComma` that splits a string by commas and returns array.
+const splitByComma = (string) => string.split(",");
+console.log(splitByComma("1, 2, 3, 4, 5, 6"));
 
 // 9. Create arrow function `replaceWord` that replaces first occurrence of a word with another word.
+const replaceWord = (string) => string.replace("hello", "Namaste");
+console.log(replaceWord("hello"));
 
 // 10. Create arrow function `charAtIndex` that returns character at given index.
+const charAtIndex = (character) => character.charAt(2);
+console.log(charAtIndex("SAMIR"));
 
 // ---
 
 // ### Simple Combined Practice
 
 // 1. Create arrow function `isValidName` that returns true if trimmed name length > 0.
+const isValidName = (name) => name.length > 0;
+console.log(isValidName(""));
+
 // 2. Create arrow function `countWords` that counts number of words in a string (split by space).
+const countWords = (words) => words.split(" ").length;
+console.log(countWords("apple orange mango watermelon"));
+
 // 3. Create arrow function `capitalizeFirstChar` that capitalizes only the first character of string.
+const capitalizeFirstChar = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+console.log(capitalizeFirstChar("hello"));
+
 // 4. Create arrow function `isEmail` that returns true if string includes "@".
 // 5. Create arrow function `getFirstWord` that returns the first word from a sentence.
 // 6. Create arrow function `lastCharToUpper` that returns last character in uppercase.
