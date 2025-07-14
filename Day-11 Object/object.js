@@ -4,23 +4,54 @@
 
 // - Count how many words start with a vowel using reduce:
 
-//     const words = ['apple', 'banana', 'orange', 'grape', 'umbrella']
+{
+  const words = ["apple", "banana", "Orange", "grape", "umbrella"];
+  const aStart = words.reduce((acc, word) => {
+    const vowel = word[0].toLowerCase();
+    return ["a", "e", "i", "o", "u"].includes(vowel) ? acc + 1 : acc;
+  }, 0);
+  console.log(aStart);
+}
 
 // - Find the smallest odd number in this array using reduce:
 
-//     const numbers = [11, 6, 3, 9, 14]
+{
+  const numbers = [11, 6, 3, 9, 14];
+  const smallestOdd = numbers.reduce((acc, number) => {
+    return number % 2 !== 0 && number < acc ? number : acc;
+  });
+  console.log(smallestOdd);
+}
 
 // - Count how many fruits contain the letter 'a' using reduce:
 
-//     const fruits = ['apple', 'banana', 'grape', 'kiwi']
+{
+  const fruits = ["apple", "banana", "grape", "kiwi"];
+  const aLetter = fruits.reduce((acc, fruit) => {
+    return fruit.includes("a") ? acc + 1 : acc;
+  }, 0);
+  console.log(aLetter);
+}
 
 // - Count how many times the number 5 appears in this array using reduce:
 
-//     const numbers = [5, 2, 5, 7, 5, 9]
+{
+  const numbers = [5, 2, 5, 7, 5, 9];
+  const numRepeat = numbers.reduce((acc, number) => {
+    return number === 5 ? acc + 1 : acc;
+  }, 0);
+  console.log(numRepeat);
+}
 
 // - Find the sum of only even numbers in this array using reduce:
 
-//     const numbers = [4, 7, 10, 13, 16]
+{
+  const numbers = [4, 7, 10, 13, 16];
+  const evenSum = numbers.reduce((acc, number) => {
+    return number % 2 === 0 ? number + acc : acc;
+  }, 0);
+  console.log(evenSum);
+}
 
 // # In JavaScript, Objects are King.
 
@@ -32,9 +63,24 @@
 
 {
   const person = { name: "Ram", age: 30, location: "Kathmandu", height: 6 };
+  console.log(person);
 }
 
-// Task - Create any two objects that you like, but dont make it very simple one like {one: 1, two: 2}. Try to think as it it is useful in real world.
+// Task - Create any two objects that you like,
+// but dont make it very simple one like {one: 1, two: 2}.
+// Try to think as it it is useful in real world.
+{
+  const vehicle = {
+    brand: "Honda",
+    price: 2500000,
+    model: 2024,
+    category: "4X4",
+  };
+  console.log(vehicle);
+}
+{
+  const students = { name: "Samir", age: 30, address: "Patan", gender: "male" };
+}
 
 // How to create and empty object - 2 ways
 
@@ -45,7 +91,8 @@
 
 // What are object properties ?
 
-// In key value pair, the key is called the property. In pervious example name was property and “Ram” was value.
+// In key value pair, the key is called the property.
+// In pervious example name was property and “Ram” was value.
 
 // How to access Object properties.
 
@@ -63,7 +110,9 @@
     height: 6,
     weight: 79,
   };
-  person.weight = 80;
+  delete person.name;
+  delete person.age;
+  console.log(person);
 }
 
 // Task - Create a new object and at least add two new properties to it.
@@ -72,9 +121,7 @@
 
 // It deletes both key and value pair.
 
-// ```jsx
 // delete person.age;
-// ```
 
 // Task - Create an object and at least delete two properties.
 
@@ -82,83 +129,108 @@
 
 // It is object inside object.
 
-// ```jsx
-// const person = {
-//   name: "Ram",
-//   age: 25,
-//   education : {
-//     "slc" : 80,
-//     "plus2": 70,
-//     "bachelors": 60,
-//   }
-// }
-// ```
+{
+  const person = {
+    name: "Ram",
+    age: 25,
+    education: {
+      slc: 80,
+      plus2: 70,
+      bachelors: 60,
+    },
+  };
+}
 
 // Task - Create any two similar nested objects.
 
 // But the most commonly used object is when an object is inside array. It is called array of objects. eg.
 
-// ```jsx
-// const products = [
-//   {id: 1, name: "Laptop", price: 80000, isAvailable: true},
-//   {id: 2, name: "TV", price: 50000, isAvailable: true},
-//   {id: 3, name: "Watch", price: 5000, isAvailable: false},
-//   {id: 4, name: "Phone", price: 40000, isAvailable: true},
-// ];
-// ```
+{
+  const products = [
+    { id: 1, name: "Laptop", price: 80000, isAvailable: true },
+    { id: 2, name: "TV", price: 50000, isAvailable: true },
+    { id: 3, name: "Watch", price: 5000, isAvailable: false },
+    { id: 4, name: "Phone", price: 40000, isAvailable: true },
+  ];
+}
 
 // Task -
 
 // 1. Create a similar array of objects for a normal kirana shop in nepal at least 8 products.
+{
+  const groceryProducts = [
+    { id: 1, name: "Rice", price: 200, homeDelivery: true },
+    { id: 1, name: "Cooking Oil", price: 300, homeDelivery: true },
+    { id: 1, name: "Sugar", price: 220, homeDelivery: false },
+    { id: 1, name: "Noodles", price: 20, homeDelivery: true },
+    { id: 1, name: "Dry Onion", price: 80, homeDelivery: true },
+    { id: 1, name: "Potato", price: 60, homeDelivery: false },
+    { id: 1, name: "Gas", price: 2000, homeDelivery: true },
+    { id: 1, name: "Soap", price: 25, homeDelivery: false },
+  ];
+}
 // 2. Create a similar array of objects for a normal bakery shop.
+{
+  const bakeryProducts = [
+    { id: 1, name: "Black Forest Cake", price: 200, homeDelivery: true },
+    { id: 1, name: "Muffin", price: 300, homeDelivery: true },
+    { id: 1, name: "Crosaint", price: 220, homeDelivery: false },
+    { id: 1, name: "Cookies", price: 20, homeDelivery: true },
+    { id: 1, name: "Cheese Cake", price: 80, homeDelivery: true },
+    { id: 1, name: "Chocolate Cake", price: 60, homeDelivery: false },
+    { id: 1, name: "Donuts", price: 2000, homeDelivery: true },
+    { id: 1, name: "Cup Cake", price: 25, homeDelivery: false },
+  ];
+}
 // 3. Create a similar array for a restaurant.
 // 4. Create a similar array for a stationery shop.
 
 // What are methods ?
 
 // The function or actions that can be performed on objects are called methods.
+{
+  const person = {
+    name: "Ram",
+    age: 25,
+    location: "Kathmandu",
+    greet() {
+      return `Good Morning my name ${this.name}, i am ${this.age} years old, live in ${this.location}`;
+    },
+  };
 
-// ```jsx
-// const person = {
-//   name: "Ram",
-//   age: 25,
-//   location: "Kathmandu",
-//   greet () {
-//     return `Good Morning ${this.name}`;
-//   },
-// };
-
-// console.log(person.greet());
-// ```
+  console.log(person.greet());
+}
 
 // Task - Create a normal object and make at least 2 methods on it and also call them.
 
 // Why we dont use arrow function instead ?
 
-// Actually arrow function dont have their own this so they capture this from outer scope, which means this do not refer to person object rather refers to the window (in browser) or undefined (in strict mode). The example will give us undefined.
+// Actually arrow function dont have their own this so they capture this from outer scope,
+// which means this do not refer to person object rather refers to the window
+// (in browser) or undefined (in strict mode). The example will give us undefined.
 
-// ```jsx
-// const person = {
-//   name: "Ram",
-//   age: 25,
-//   location: "Kathmandu",
-//   greet : () => {
-//     return `Good Morning ${this.name}`;
-//   },
-// };
+{
+  const person = {
+    name: "Ram",
+    age: 25,
+    location: "Kathmandu",
+    greet: () => {
+      return `Good Morning ${this.name}`;
+    },
+  };
 
-// console.log(person.greet());
-// ```
+  console.log(person.greet());
+}
 
 // How to add method to an object from outside
 
-// ```jsx
-// person.sayAge = function () {
-//   return `${this.name} is ${this.age} yrs old.`;
-// };
+{
+  person.sayAge = function () {
+    return `${this.name} is ${this.age} yrs old.`;
+  };
 
-// console.log(person.sayAge());
-// ```
+  console.log(person.sayAge());
+}
 
 // Task - Create a new array and add at least two methods from outside as well as call it.
 
