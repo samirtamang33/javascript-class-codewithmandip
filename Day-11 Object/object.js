@@ -110,14 +110,28 @@
     height: 6,
     weight: 79,
   };
-  delete person.name;
-  delete person.age;
+  person.birthYear = 1994; //add properties
+
+  // console.log(person.name);
+  // console.log(person.age);
+  // console.log(person.location);
+  // delete person.name;
+  // delete person.age;
   console.log(person);
 }
 
 // Task - Create a new object and at least add two new properties to it.
 
-// How to delete properties
+const vehicle = {
+  brand: "Toyota",
+  model: 2025,
+};
+vehicle.engine = "V8";
+vehicle.name = "Land Cruiser";
+console.log(vehicle);
+
+delete vehicle.engine; // How to delete properties
+console.log(vehicle);
 
 // It deletes both key and value pair.
 
@@ -140,8 +154,25 @@
     },
   };
 }
+{
+  const province = {
+    country: "Nepal",
+    total: 7,
+    bagmati: {
+      district: {
+        kathmandu: {
+          address: "Thapathali",
+        },
+      },
+    },
+  };
+
+  console.log(province.bagmati.district.kathmandu.address);
+}
 
 // Task - Create any two similar nested objects.
+{
+}
 
 // But the most commonly used object is when an object is inside array. It is called array of objects. eg.
 
@@ -160,14 +191,15 @@
 {
   const groceryProducts = [
     { id: 1, name: "Rice", price: 200, homeDelivery: true },
-    { id: 1, name: "Cooking Oil", price: 300, homeDelivery: true },
-    { id: 1, name: "Sugar", price: 220, homeDelivery: false },
-    { id: 1, name: "Noodles", price: 20, homeDelivery: true },
-    { id: 1, name: "Dry Onion", price: 80, homeDelivery: true },
-    { id: 1, name: "Potato", price: 60, homeDelivery: false },
-    { id: 1, name: "Gas", price: 2000, homeDelivery: true },
-    { id: 1, name: "Soap", price: 25, homeDelivery: false },
+    { id: 2, name: "Cooking Oil", price: 300, homeDelivery: true },
+    { id: 3, name: "Sugar", price: 220, homeDelivery: false },
+    { id: 4, name: "Noodles", price: 20, homeDelivery: true },
+    { id: 5, name: "Dry Onion", price: 80, homeDelivery: true },
+    { id: 6, name: "Potato", price: 60, homeDelivery: false },
+    { id: 7, name: "Gas", price: 2000, homeDelivery: true },
+    { id: 8, name: "Soap", price: 25, homeDelivery: false },
   ];
+  console.log(groceryProducts[0].name);
 }
 // 2. Create a similar array of objects for a normal bakery shop.
 {
@@ -183,7 +215,41 @@
   ];
 }
 // 3. Create a similar array for a restaurant.
+{
+  const restaurant = [
+    {
+      name: "Road House",
+      cousin: "Italian",
+      menu: {
+        food: "Pizza",
+        beverage: "Coffee",
+        drinks: "Cocktail",
+      },
+    },
+    {
+      name: "Dalle Restaurant",
+      cousin: "Nepali",
+      menu: { food: "momo", beverage: "Kombucha" },
+    },
+    {
+      name: "KFC",
+      cousin: "Fastfood",
+      menu: { food: "Fried Chicken", beverage: "Coke" },
+    },
+  ];
+  console.table(restaurant);
+}
 // 4. Create a similar array for a stationery shop.
+{
+  const stationeryProducts = [
+    { id: 1, item: "Pencil", price: 23 },
+    { id: 2, item: "Sharpner", price: 33 },
+    { id: 3, item: "Notebook", price: 53 },
+    { id: 4, item: "Book", price: 200 },
+    { id: 5, item: "Scale", price: 22 },
+    { id: 6, item: "Copy", price: 77 },
+  ];
+}
 
 // What are methods ?
 
@@ -220,11 +286,9 @@
   };
 
   console.log(person.greet());
-}
 
-// How to add method to an object from outside
+  // How to add method to an object from outside
 
-{
   person.sayAge = function () {
     return `${this.name} is ${this.age} yrs old.`;
   };
