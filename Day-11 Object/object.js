@@ -10,7 +10,7 @@
     const vowel = word[0].toLowerCase();
     return ["a", "e", "i", "o", "u"].includes(vowel) ? acc + 1 : acc;
   }, 0);
-  console.log(aStart);
+  // console.log(aStart);
 }
 
 // - Find the smallest odd number in this array using reduce:
@@ -20,7 +20,7 @@
   const smallestOdd = numbers.reduce((acc, number) => {
     return number % 2 !== 0 && number < acc ? number : acc;
   });
-  console.log(smallestOdd);
+  // console.log(smallestOdd);
 }
 
 // - Count how many fruits contain the letter 'a' using reduce:
@@ -30,7 +30,7 @@
   const aLetter = fruits.reduce((acc, fruit) => {
     return fruit.includes("a") ? acc + 1 : acc;
   }, 0);
-  console.log(aLetter);
+  // console.log(aLetter);
 }
 
 // - Count how many times the number 5 appears in this array using reduce:
@@ -40,7 +40,7 @@
   const numRepeat = numbers.reduce((acc, number) => {
     return number === 5 ? acc + 1 : acc;
   }, 0);
-  console.log(numRepeat);
+  // console.log(numRepeat);
 }
 
 // - Find the sum of only even numbers in this array using reduce:
@@ -50,7 +50,7 @@
   const evenSum = numbers.reduce((acc, number) => {
     return number % 2 === 0 ? number + acc : acc;
   }, 0);
-  console.log(evenSum);
+  // console.log(evenSum);
 }
 
 // # In JavaScript, Objects are King.
@@ -63,7 +63,7 @@
 
 {
   const person = { name: "Ram", age: 30, location: "Kathmandu", height: 6 };
-  console.log(person);
+  // console.log(person);
 }
 
 // Task - Create any two objects that you like,
@@ -76,7 +76,7 @@
     model: 2024,
     category: "4X4",
   };
-  console.log(vehicle);
+  // console.log(vehicle);
 }
 {
   const students = { name: "Samir", age: 30, address: "Patan", gender: "male" };
@@ -117,7 +117,7 @@
   // console.log(person.location);
   // delete person.name;
   // delete person.age;
-  console.log(person);
+  // console.log(person);
 }
 
 // Task - Create a new object and at least add two new properties to it.
@@ -128,10 +128,10 @@ const vehicle = {
 };
 vehicle.engine = "V8";
 vehicle.name = "Land Cruiser";
-console.log(vehicle);
+// console.log(vehicle);
 
 delete vehicle.engine; // How to delete properties
-console.log(vehicle);
+// console.log(vehicle);
 
 // It deletes both key and value pair.
 
@@ -167,7 +167,7 @@ console.log(vehicle);
     },
   };
 
-  console.log(province.bagmati.district.kathmandu.address);
+  // console.log(province.bagmati.district.kathmandu.address);
 }
 
 // Task - Create any two similar nested objects.
@@ -199,7 +199,7 @@ console.log(vehicle);
     { id: 7, name: "Gas", price: 2000, homeDelivery: true },
     { id: 8, name: "Soap", price: 25, homeDelivery: false },
   ];
-  console.log(groceryProducts[0].name);
+  // console.log(groceryProducts[0].name);
 }
 // 2. Create a similar array of objects for a normal bakery shop.
 {
@@ -237,7 +237,7 @@ console.log(vehicle);
       menu: { food: "Fried Chicken", beverage: "Coke" },
     },
   ];
-  console.table(restaurant);
+  // console.table(restaurant);
 }
 // 4. Create a similar array for a stationery shop.
 {
@@ -264,7 +264,7 @@ console.log(vehicle);
     },
   };
 
-  console.log(person.greet());
+  // console.log(person.greet());
 }
 
 // Task - Create a normal object and make at least 2 methods on it and also call them.
@@ -285,7 +285,7 @@ console.log(vehicle);
     },
   };
 
-  console.log(person.greet());
+  // console.log(person.greet());
 
   // How to add method to an object from outside
 
@@ -293,7 +293,7 @@ console.log(vehicle);
     return `${this.name} is ${this.age} yrs old.`;
   };
 
-  console.log(person.sayAge());
+  // console.log(person.sayAge());
 }
 
 // Task - Create a new array and add at least two methods from outside as well as call it.
@@ -325,6 +325,7 @@ console.log(vehicle);
 // ### Object Creation & Properties
 
 // 1. Create two real-world objects with at least 4 properties each (not too simple). Print them.
+
 // 2. Create an empty object using `{}` and add 3 properties dynamically. Print the object.
 // 3. Create an empty object using `new Object()` and add 3 properties dynamically. Print it.
 // 4. Create an object and access at least 3 properties using dot notation.
