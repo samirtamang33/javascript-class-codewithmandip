@@ -3,9 +3,53 @@
 // // ### Methods
 
 // // 1. Create an object with 2 properties and 1 method that returns a greeting message using `this`.
-// // 2. Create an object with 3 properties and 2 methods — one returns a greeting, one returns a message about the age/property.
+{
+  const person = {
+    name: "Samir",
+    greet() {
+      return `Namaste ${this.name}`;
+    },
+  };
+  console.log(person.greet());
+}
+// // 2. Create an object with 3 properties and 2 methods — one returns a greeting,
+// one returns a message about the age/property.
+{
+  const fruit = {
+    name: "Apple",
+    price: 100,
+    cost() {
+      return `${this.name} cost ${this.price} rupees.`;
+    },
+    brand() {
+      return `${this.name} is Chinese.`;
+    },
+  };
+  console.log(fruit.cost());
+  console.log(fruit.brand());
+}
 // // 3. Add a method from outside the object that returns a message using `this`. Call it and print.
+{
+  const car = {
+    name: "Land Cruiser",
+    brand: "Toyota",
+    model: 2025,
+  };
+  car.madeIn = function () {
+    return `This ${this.model} ${this.brand} ${this.name} is made in Japan`;
+  };
+  console.table(car.madeIn());
+}
 // // 4. Create an object with a method and call that method to print a message.
+{
+  const user = {
+    name: "Samir",
+    isLoggedIn() {
+      return `${this.name} is logged In`;
+    },
+  };
+  console.log(user.isLoggedIn());
+}
 
 // // ---
 
