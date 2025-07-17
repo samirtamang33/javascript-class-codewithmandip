@@ -65,7 +65,7 @@ console.table(addCategory);
 // 8. Add an new property named inStock with its value equal to isAvailable (better use spread operator).
 const inStock = products.map((product) => ({
   ...product,
-  inStock: product.isAvailable === true ? "Available" : "Not Available",
+  inStock: product.isAvailable ? "Available" : "Not Available",
 }));
 console.table(inStock);
 // 9. Add a new property named priceWithTax whose value if 20% of MP. (spread operator)
