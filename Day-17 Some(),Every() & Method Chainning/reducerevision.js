@@ -203,6 +203,6 @@ const longestProductName = products.reduce((acc, product) => {
   sumOfDoubleEvenNumbers = numbers
     .filter((number) => number % 2 === 0)
     .map((number) => number * number)
-    .reduce((acc, number) => number + acc);
+    .reduce((acc, number) => acc + number, 0);
   console.log(sumOfDoubleEvenNumbers);
 }
